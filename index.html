@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control the weather!</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="weather.js"></script>
+</head>
+
+<body>
+    <div id="weather">
+        <img class="sky-element" src="images/sun.png" id="sun">
+        <img class="sky-element" src="images/p-cloud-1.png" id="p-cloud-1">
+        <img class="sky-element" src="images/p-cloud-2.png" id="p-cloud-2">
+        <img class="sky-element" src="images/r-cloud-1.png" id="r-cloud-1">
+        <img class="sky-element" src="images/r-cloud-2.png" id="r-cloud-2">
+        <img class="sky-element" src="images/r-cloud-3.png" id="r-cloud-3">
+        <audio src="storm-sound.mp3" id="storm" loop></audio>
+        <form>
+            <h4>Set barometric pressure</h4>
+            <label for="barometer"><output id="num">30</output></label>
+            <input type="range" id="barometer" step="0.50" value="30" min="26" max="31" list="barlist"
+                oninput="num.value = this.value">
+
+            <datalist is="barlist">
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </datalist>
+        </form>
+    </div>
+    <script>
+        /* Weather functions you can call
+        sunny();
+        addClouds();
+        addRainClouds();
+        makeRain();
+        */
+        sunny();
+
+        //Exercise 1
+        /* Create a variable and assign it a boolean value of true
+        Create a conditional statement that logs "This is true" in the console
+        Hint: Use the equal operator ==
+        Edit the condition to change the output to "This is not true" */
+
+
+
+
+        //Exercise 2
+        /* Create a variable and assign it to your best friend's name
+        Create a conditional statement that logs "Hi" to your best friend
+        Add an else that logs "Hello World"
+        Exercise 2.2
+        Edit the condition to change the output to "Hello world!"
+        Hint: use the not equal operator != 
+        */
+
+      
+
+        //Exercise 3
+        //Select the input tag by its id and assign is variable with const keyword
+      
+
+        function changeWeather(evt) {
+            evt.preventDefault();
+            //Exercise 4
+            //Get the value of the input using its variable name and the value property
+            //Log its value in the console
+       
+
+            /* Exercise 6
+            Create an if statement to show the sun at pressures over 30
+            Add an else to alert "not a valid barometric pressure"
+            Exercise 7
+            In between the if and else, add an else if statement to add clouds at pressures below 30
+            Exercise 8
+            Edit the else if statement you just made.
+            Use the 'and' operator to check for a range of numbers greater than or equal to 29 but less than 30
+            Exercise 9
+            Add 2 more else if statements for the following:
+            Add rain clouds for pressures greater than or equal to 28 but less than 29
+            Make rain for pressures greater than or equal to 27 but less than 28
+            Bonus
+            Add another else if for pressures under 27
+            Make it rain and play the thunderstorm audio
+            select the audio tag by its id and run the play() method on it
+            */
+
+          
+        }
+
+        //Exercise 5
+        /*Add an event listener for the input object using its variable name
+        and have it call the changeWeather function on the 'change' event */
+
+
+
+
+    </script>
+</body>
+
+</html>
