@@ -51,7 +51,13 @@
         Hint: Use the equal operator ==
         Edit the condition to change the output to "This is not true" */
 
-
+        let isTrue = true;
+        if (isTrue == false) {
+            console.log("This is not true");
+            } else {
+            console.log("This is true");
+            }
+                    
 
 
         //Exercise 2
@@ -63,17 +69,26 @@
         Hint: use the not equal operator != 
         */
 
-      
+        let bestFriend = "Jane";
+        if (bestFriend != "Jane") {
+            console.log("Hello world!");
+            } else {
+            console.log('Hi ${bestFriend}');
+            }
+
+        
 
         //Exercise 3
         //Select the input tag by its id and assign is variable with const keyword
-      
+
+        const pressureInput = document.getElementById('barometer');
 
         function changeWeather(evt) {
             evt.preventDefault();
             //Exercise 4
             //Get the value of the input using its variable name and the value property
             //Log its value in the console
+            console.log(pressureInput.value);
        
 
             /* Exercise 6
@@ -94,13 +109,36 @@
             select the audio tag by its id and run the play() method on it
             */
 
+           // Get the value of the input using its variable name and the value property
+                const pressure = pressureInput.value;
+
+                if (pressure > 30) {
+                    console.log("Show the sun");
+                }
+                else if (pressure >= 29 && pressure < 30) {
+                    console.log("Add clouds");
+                }
+                else if (pressure >= 28 && pressure < 29) {
+                    console.log("Add rain clouds");
+                }
+                else if (pressure >= 27 && pressure < 28) {
+                    console.log("Make rain");
+                }
+                else if (pressure < 27) {
+                    console.log("Make it rain and play the thunderstorm audio");
+                    const audio = document.getElementById("storm");
+                    audio.play();
+                }
+                else {
+                    alert("not a valid barometric pressure");
+                }
           
         }
 
         //Exercise 5
         /*Add an event listener for the input object using its variable name
         and have it call the changeWeather function on the 'change' event */
-
+        pressureInput.addEventListener('change', changeWeather);
 
 
 
