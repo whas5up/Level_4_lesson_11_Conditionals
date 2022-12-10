@@ -113,21 +113,21 @@
                 const pressure = pressureInput.value;
 
                 if (pressure > 30) {
-                    console.log("Show the sun");
+                    document.getElementById('sun').style.display = 'block';
                 }
                 else if (pressure >= 29 && pressure < 30) {
-                    console.log("Add clouds");
+                    document.getElementById('p-cloud-1').style.display = 'block';
+                    document.getElementById('p-cloud-2').style.display = 'block';
                 }
                 else if (pressure >= 28 && pressure < 29) {
-                    console.log("Add rain clouds");
-                }
+                    document.getElementById('r-cloud-1').style.display = 'block';
+                    document.getElementById('r-cloud-2').style.display = 'block';
+                    }
                 else if (pressure >= 27 && pressure < 28) {
-                    console.log("Make rain");
-                }
+                    document.getElementById('r-cloud-3').style.display = 'block';
+                    }
                 else if (pressure < 27) {
-                    console.log("Make it rain and play the thunderstorm audio");
-                    const audio = document.getElementById("storm");
-                    audio.play();
+                    document.querySelector('#storm').play();
                 }
                 else {
                     alert("not a valid barometric pressure");
