@@ -88,7 +88,7 @@
             //Exercise 4
             //Get the value of the input using its variable name and the value property
             //Log its value in the console
-            console.log(pressureInput.value);
+            console.log("Barometric pressure: " + pressureInput.value);
        
 
             /* Exercise 6
@@ -113,24 +113,23 @@
                 const pressure = pressureInput.value;
 
                 if (pressure > 30) {
-                    document.getElementById('sun').style.display = 'block';
+                    sunny();
                 }
                 else if (pressure >= 29 && pressure < 30) {
-                    document.getElementById('p-cloud-1').style.display = 'block';
-                    document.getElementById('p-cloud-2').style.display = 'block';
+                    addClouds();
                 }
                 else if (pressure >= 28 && pressure < 29) {
-                    document.getElementById('r-cloud-1').style.display = 'block';
-                    document.getElementById('r-cloud-2').style.display = 'block';
+                    addRainClouds();
                     }
                 else if (pressure >= 27 && pressure < 28) {
-                    document.getElementById('r-cloud-3').style.display = 'block';
+                    makeRain();
                     }
                 else if (pressure < 27) {
+                    makeRain();
                     document.querySelector('#storm').play();
                 }
                 else {
-                    alert("not a valid barometric pressure");
+                    alert("Invalid barometric pressure");
                 }
           
         }
